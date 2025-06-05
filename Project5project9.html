@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 5: Turtle Graphics Refactor</title>
+    <link rel="stylesheet" href="styles-2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Project 5: Turtle Graphics Refactor</h1>
+    <hr>
+</header>
+
+<section>
+    <h2>About the Project</h2>
+    <p>
+        In this project, I refactored my turtle drawing code from Project 4. The goal was to simplify the structure by using functions, reduce repetition, and build a modular drawing system. By using loops and defining separate shapes as functions, I made the design both more readable and more efficient. Whereas project 4 required invidual functions for each shape, in this project I created groups of draw functions for example "draw_house" or "draw_sun", allowing for easy use.
+    </p>
+</section>
+
+<section>
+    <h2>Sample Code</h2>
+    <p>
+        The code below uses the turtle library in Python to draw the entire house. By defining each portion of the house ("<code>draw_rectangle</code>" as the body for example), the function "<code>draw_house</code>" was defined, allowing me to use it simply. "t" is the turtle object for drawing, and x and y are the starting postions for the rectangle (house body), triangle (house roof), rectangle (house door), square (windows 1 and 2) and circle (door knob). <code>fill_color</code> defines the color that the rectangle will be filled with, in this case I used red for the body, brown for the roof, yellow for the door, light blue for the windows and black for the door knob. 
+    <pre><code>
+
+    def draw_house (t,x,y): 
+    
+        jump_to(t,x,y) # House Body
+        draw_rectangle(t, 150, 100, fill_color="red")
+
+        jump_to(t,x,y +1) # House Roof
+        draw_triangle(t, 150, fill_color="brown")
+
+        jump_to(t,x+55,y-40) # House Door
+        draw_rectangle(t, 40, 60, fill_color="yellow")
+
+        jump_to(t,x+15,y-40) # Window 1
+        draw_square(t,25,fill_color="lightblue")
+
+        jump_to(t,x+105,y-40) # Window 2
+        draw_square(t,25,fill_color="lightblue")
+
+        jump_to(t,x+62,y-70) # Door Knob
+        draw_circle(t, 2, fill_color="black")
+
+ # Done
+
+    </code></pre>
+</section>
+
+<section>
+    <h2>Final Scene</h2>
+    <p>
+        The final scene utilizes my refactored functions <code>draw_house</code>,<code>draw_sun</code>,<code>draw_cloud</code> and <code>draw_cloud_multiple</code> to create a scene with 5 houses, 2 suns, and multiple clouds.
+    </p>
+    <img src="Refactored improved.PNG" alt="Final turtle graphics drawing" style="width:100%; max-width:600px; border: 2px solid #ccc; border-radius: 8px;">
+</section>
+
+<section>
+    <a href="index-1.html">&larr; Back to AboutMe</a>
+</section>
+
+<footer>
+    <p>&copy; 2025 Io Smith — Project 5 | Background: Unsplash</p>
+</footer>
+
+</body>
+</html>

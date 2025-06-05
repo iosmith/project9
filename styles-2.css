@@ -1,0 +1,186 @@
+/* Io Smith */
+/* please make sure you change the name of this file to styles.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Background Image with Transparency */
+/* need position: fixed; and top: 0; left: 0; */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pawel-czerwinski-EdULlCRj-x0-unsplash-2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+ .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;       
+        border-radius: 0;      
+        display: block;
+        margin: 0 auto 20px auto;
+        border: 4px solid #8f6b6b;
+ }
+     .personal-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .personal-content p {
+    flex: 1 1 300px;
+  }
+
+   a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    a:hover {
+        color: #4f8059;
+        text-decoration: underline;
+    }
+    
+    a:visited {
+        color: #ffffff;
+    }
+    .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 10px 0;
+    }    
+    .contact-links a {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 10px 20px;
+       margin: 5px;
+       background-color: #b16e6e;
+       color: #ffffff;
+       border-radius: 8px;
+       border: 2px solid #977676;
+       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+       font-weight: 600;
+       text-decoration: none;
+       transition: all 0.3s ease;
+       white-space: nowrap;
+       text-align: center;
+       flex: 1 1 200px;
+       max-width: 300px;
+     }
+    
+    .contact-links a:hover {
+        background-color: #004f99;
+        border-color: #004f99;
+        color: white;
+        transform: translateY(-2px);
+    }
+     section {
+        background-color: rgb(85, 71, 71);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 2.5em;
+        color: white;
+        background-color: #613e3e;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    h2 {
+        border-bottom: 2px solid #cf5f5f;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-family:'Trebuchet MS', sans-serif; 
+    }
+    section ul,
+    section ol {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        text-align: left;
+        list-style-position: inside;
+        padding-left: 0;
+        margin: 0 auto 20px auto;
+    }
+    
+    section ul li,
+    section ol li {
+    flex: 1 1 200px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        background-color:#613e3e;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    hr {
+        margin-bottom: 10px;
+    }
+    @media (max-width: 600px) {
+        section ul,
+        section ol {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    footer {
+        background-color: rgba(34, 34, 34, 0.9);
+        color: #fff;
+    }
+
+    }

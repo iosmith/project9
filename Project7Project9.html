@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 7: Data Exploration with Pandas</title>
+    <link rel="stylesheet" href="styles-2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Project 7: Data Exploration with Pandas</h1>
+    <hr>
+</header>
+
+<section>
+    <h2>About the Project</h2>
+    <p>
+        This project focused on exploring a real-world dataset of electric vehicles registered in Washington State. Using Python libraries like <code>Pandas</code>, <code>Matplotlib</code>, and <code>Seaborn</code>, I performed data cleaning, aggregation, and visualization to uncover insights about electric vehicle types, registration trends, and county-level adoption. Like project 6, this project allowed me to further understand data analysis via python, utilizing real-world examples. 
+    </p>
+</section>
+
+<section>
+    <h2>Sample Code </h2>
+    <p>
+        Below is a portion of the code I used to answer the question "What is the distribution of electric vehicle types (BEVs and PHEVs) across Washington counties with at least 80 registered electric vehicles?" After importing pandas via <code>import pandas as pd</code>, Matplotlib via <code>import matplotlib.pyplot as plt</code> and seaborn via <code>import seaborn as sns</code> and extracting basic data, I used the below command to filer the data (counties with > 80 registered EVs) and answer the question.
+    </p>
+
+    <pre><code>
+    
+    county_counts = df['County'].value_counts() # Total EV's per county
+    filtered_counties = county_counts[county_counts >= 80].index # Filter to counties with > 80 EV's
+    filtered_df = df[df['County'].isin(filtered_counties)] # Filtering orignal data
+
+    </code></pre>
+</section>
+
+<section>
+    <h2>Final Output</h2>
+    <p>
+        After extracting the basic data to answer my question, I was able to visualize the results using <code>matplotlib</code> to graph the results. The first graph I used is a bar chart, visualzing distributions of BEV's and PHEV's in counties with > 80 registered eletric vehicles. The second graph is a pie chart, showing the total distribution among the filtered counties.
+    </p>
+
+    <figure>
+        <img src="graph1.PNG" alt="Bar chart of BEVs by county" style="width:100%; max-width:600px; border: 2px solid #ccc; border-radius: 8px;">
+        <figcaption>Figure 1: EV type distribution within filtered counties</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="graph2.PNG" alt="Pie chart of distribution" style="width:100%; max-width:600px; border: 2px solid #ccc; border-radius: 8px;">
+        <figcaption>Figure 2: Total distribution in all counties. (BEV vs. PHEV)</figcaption>
+    </figure>
+
+
+
+</section>
+
+<section>
+    <a href="index.html">&larr; Back to AboutMe</a>
+</section>
+
+<footer>
+    <p>&copy; 2025 Io Smith — Project 7 | Background: Unsplash</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 5: Turtle Graphics Refactor</title>
+    <link rel="stylesheet" href="styles-2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Project 6: Advanced Text Analysis with spaCy</h1>
+    <hr>
+</header>
+
+<section>
+    <h2>About the Project</h2>
+    <p>
+        For this project, I used natural language processing via the <code>spaCy</code> library in python. I used spaCy to analyze and extract elements from JFK's inaugural address. The analysis allowed me to identify sentence structure, most used words, etc. My work with spaCy gave me a better understanding of data analysis using python libaries. 
+    </p>
+</section>
+
+<section>
+    <h2>Sample Code</h2>
+    <p>
+        The code below is an example of my use of spaCy to extract the most frequent words within the text, after using tokenization, and filtering out of common words (the, to, of, and, etc). The result is a collection of meaningful words used in Kennedy's speech that gives us a better understanding of the text.
+    <pre><code>
+
+def create_word_frequency_dict(words):
+    """
+    Creates a word frequency dictionary from a list of words.
+
+    Args:
+    words (list): A list of words.
+
+    Returns:
+    dict: A dictionary where keys are words and values are their frequencies.
+    """
+    word_freq = {}
+    for word in words:
+        if word in word_freq:
+            word_freq[word] += 1
+        else:
+            word_freq[word] = 1
+    return word_freq
+    print(word_freq)
+
+create_word_frequency_dict(cleaned_words)
+
+    </code></pre>
+<p>
+    The result: 
+    {'vice': 2,
+    'president': 4,
+    'johnson': 1,
+    'speaker': 1,
+    'chief': 1,
+    'justice': 1,
+    'eisenhower': 1,
+    'nixon': 1,
+    'truman': 1,
+    'reverend': 1,
+    'clergy': 1,
+    'fellow': 4,
+    'citizen': 5,
+    'observe': 1,
+    'today': 3,
+    'victory': 1,
+    'party': 1,
+    'celebration': 1,
+    'freedom': 4,
+    'symbolize': 1,
+    'end': 2,
+    'beginning': 1,
+    'signify': 1,
+    'renewal': 1,
+    'change': 1,
+...
+ 'lead': 1,
+ 'land': 1,
+ 'love': 1,
+ 'blessing': 1,
+ 'work': 1}
+</p>
+</section>
+
+<section>
+    <h2>Final Result</h2>
+    <p>
+        The final product of this project allowed me to draw a conclusion on what JFK's inaugural address was about, and speech patterns that he used without having to read it manually. These were my takeaways: 
+    </p>
+    
+    <p>
+        First, "let" (the most common word) is likely part of repeated phrases which suggests a speech pattern within the text. This is common in many speeches, and makes it more powerful. The words "world," "side," and "power" indicate that global relations and unity were major themes. Repeated use of "pledge" and "ask" shows a strong emphasis on commitment, and ideas of a shared resposibility. Words like "nation," "citizen," and "president" reveal the national context and focus on civic identity. "shall," "free," and "good" reflect idealistic or moral themes, and the use of “new” seems like a form of promise for change. The use of text pre-processing is pretty powerful and becomes clear in this analysis: removing stop words, lemmatizing (grouping "ask" and "asks"), and lowercasing would help reduce redundancy and clarify themes even more, especially when comparing this to another speech or set of texts. By condensing words that mean essentially the same thing, a much clearer picture can be put together about the themes of any text peice.
+    </p>
+
+</section>
+
+<section>
+    <a href="index-1.html">&larr; Back to AboutMe</a>
+</section>
+
+<footer>
+    <p>&copy; 2025 Io Smith — Project 6 | Background: Unsplash</p>
+</footer>
+
+</body>
+</html>
